@@ -12,7 +12,7 @@ CREATE TABLE department(
 
 
 
-(
+CREATE TABLE ROLE(
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR (30),
     salary DECIMAL (10, 2) DEFAULT 0,
