@@ -1,14 +1,15 @@
-#  Employee Tracker
+# SQL Challenge Employee Tracker
 
+I have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called content management systems (CMS).
 
 
 ## Description
 
 This app is designed to track employees and create new ones all through the CLI." The solution was build for managing a company's employees using node, inquirer, and MySQL.
 
-![VIDEO] (https://www.youtube.com/watch?v=s1bOxsQI3bA)
+![VIDEO] (https://youtu.be/HsxvuVn8Ehc)
 
-![Database Schema](Assets/schema.png)
+
 
 ## Table of Contents
 
@@ -26,7 +27,8 @@ This app is designed to track employees and create new ones all through the CLI.
 - run on vscode terminal with cmd node server.js
 
 ## Test
-
+GitHub: https://github.com/aafaydi/SQL_employee_tracker
+Video:  https://youtu.be/HsxvuVn8Ehc
 none
 
 ## Usage
