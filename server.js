@@ -43,8 +43,8 @@ const init = () => {
                 case 'View all roles':
                     viewAllRoles();
                     break;
-                case 'Add a employees':
-                    addAAmployee();
+                case 'Add an employee':
+                    addAEmployee();
                     break;
                 case 'Add a department':
                     addADepartment();
@@ -117,34 +117,34 @@ const addADepartment = () => {
 };
 
 
-const addAAmployee = () => {
+const addAEmployee = () => {
     inquirer.prompt([
             {
-                first_name: 'employee_first',
+                name: 'first_name',
                 type: 'input',
                 message: 'Enter the first name:',
             },
             {
-                last_name: 'employee_last',
+                name: 'last_name',
                 type: 'input',
                 message: 'Enter the new last name:',
             },
             {
-                roll_id: 'roll_id',
+                name: 'role_id',
                 type: 'input',
                 message: 'Enter the new role id:',
             },
             {
-                manager_id: 'manager_id',
+                name: 'manager_id',
                 type: 'input',
                 message: 'Enter the new manager id:',
             }
         ])
-        .then(({ first_first, name_last, roll_id, manager_id }) => {
+        .then(({ first_name, last_name, role_id, manager_id }) => {
             const quary = connection.query('INSERT INTO employee SET ?', 
-            {title, salary, department_id}, (err, result) => {
+            {first_name,last_name, role_id, manager_id}, (err, result) => {
                 if (err) throw err;
-                viewAllAmployees();
+                viewAllEmployees();
             })
         })
 
