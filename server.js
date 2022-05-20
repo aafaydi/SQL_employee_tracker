@@ -24,6 +24,7 @@ const init = () => {
                 'View all departments',
                 'View all roles',
                 'Add a department',
+                'Add an employee',
                 'Add a role',
                 'Update an employee role',
                 'Quit',
@@ -41,6 +42,9 @@ const init = () => {
                     break;
                 case 'View all roles':
                     viewAllRoles();
+                    break;
+                case 'Add a employees':
+                    addAAmployee();
                     break;
                 case 'Add a department':
                     addADepartment();
@@ -111,6 +115,41 @@ const addADepartment = () => {
                 })
         })
 };
+
+
+const addAAmployee = () => {
+    inquirer.prompt([
+            {
+                first_name: 'employee_first',
+                type: 'input',
+                message: 'Enter the first name:',
+            },
+            {
+                last_name: 'employee_last',
+                type: 'input',
+                message: 'Enter the new last name:',
+            },
+            {
+                roll_id: 'roll_id',
+                type: 'input',
+                message: 'Enter the new role id:',
+            },
+            {
+                manager_id: 'manager_id',
+                type: 'input',
+                message: 'Enter the new manager id:',
+            }
+        ])
+        .then(({ first_first, name_last, roll_id, manager_id }) => {
+            const quary = connection.query('INSERT INTO employee SET ?', 
+            {title, salary, department_id}, (err, result) => {
+                if (err) throw err;
+                viewAllAmployees();
+            })
+        })
+
+};
+
 
 const addARole = () => {
     inquirer.prompt([
